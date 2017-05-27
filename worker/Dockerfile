@@ -1,0 +1,8 @@
+FROM andrusha/spark-vanilla:base
+
+ENV SPARK_NO_DAEMONIZE=1
+ENV SPARK_WORKER_WEBUI_PORT=8081
+
+CMD sbin/start-slave.sh $SPARK_MASTER
+
+EXPOSE 8081
